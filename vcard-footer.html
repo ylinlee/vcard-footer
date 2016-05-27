@@ -1,0 +1,125 @@
+<!-- Imports polymer -->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-media-query/iron-media-query.html">
+<!-- Defines element markup -->
+<dom-module id="vcard-footer">
+    <template>
+        <style>
+        .footer-background {
+            background: #141414;
+            padding: 40px;
+            color: #fff;
+        }
+        
+        .container-fluid {
+            padding: 0;
+        }
+        
+        .copyright img {
+            padding-left: 10px;
+            height: 20px;
+        }
+        
+        .row {
+            margin: 0;
+        }
+        
+        .col-left {
+            padding: 0;
+            text-align: left;
+        }
+        
+        .col-right {
+            padding: 0;
+            text-align: right;
+        }
+        
+        .col-right a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+            color: rgba(255, 255, 255, .3);
+            text-align: center;
+            position: relative;
+            webkit-transition: linear .2s;
+            -moz-transition: linear .2s;
+            -o-transition: linear .2s;
+            transition: linear .2s;
+        }
+        
+        .footer-background .copyright {
+            color: #fff;
+        }
+        
+        .col-right a:last-child {
+            margin: 0;
+        }
+        
+        .col-right i {
+            line-height: 30px;
+            font-size: 14px;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        .col-right a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .col-right[media-query-992] a::before {
+            width: 0;
+            padding: 15px 0;
+            -webkit-transition: linear .2s;
+            -moz-transition: linear .2s;
+            -o-transition: linear .2s;
+            transition: linear .2s;
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            border-bottom: 1px solid #fff;
+        }
+        </style>
+        <!-- Así mostramos las variables definidas {{}} -->
+        <!-- Footer -->
+        <iron-media-query query="(min-width: 992px)" query-matches="{{mediaQuery992}}"></iron-media-query>
+        <footer>
+            <div class="footer-background">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-left col-xs-6">
+                            <p>Made with <i class="fa fa-heart"></i> by
+                                <a class="copyright" href="https://www.polymer-project.org/1.0/">Polymer 1.0<img src="images/p-logo.png" alt="Polymer Logo"></a>
+                            </p>
+                        </div>
+                        <div class="col-right col-xs-6" media-query-992$="{{mediaQuery992}}">
+                            <a href="https://www.linkedin.com/in/yichuanlinlee">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/ylinlee?tab=repositories">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end container -->
+            </div>
+        </footer>
+        <!-- end Footer -->
+    </template>
+</dom-module>
+<!-- Registers custom element -->
+<script>
+Polymer({
+    is: 'vcard-footer', //Registramos el nombre del componente
+    ready: function() {
+
+    }
+});
+</script>
