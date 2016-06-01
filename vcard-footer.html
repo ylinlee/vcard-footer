@@ -29,6 +29,10 @@
             text-align: left;
         }
         
+        .col-left i {
+            padding: 3px;
+        }
+        
         .col-right {
             padding: 0;
             text-align: right;
@@ -84,15 +88,20 @@
             left: 0;
             border-bottom: 1px solid #fff;
         }
+        
+        .col-left[media-query-768] p {
+            line-height: 30px;
+        }
         </style>
         <!-- Así mostramos las variables definidas {{}} -->
         <!-- Footer -->
         <iron-media-query query="(min-width: 992px)" query-matches="{{mediaQuery992}}"></iron-media-query>
+        <iron-media-query query="(min-width: 768px)" query-matches="{{mediaQuery768}}"></iron-media-query>
         <footer>
             <div class="footer-background">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-left col-xs-6">
+                        <div class="col-left col-xs-6" media-query-768$="{{mediaQuery768}}">
                             <p>Made with <i class="fa fa-heart"></i> by
                                 <a class="copyright" href="https://www.polymer-project.org/1.0/">Polymer 1.0<img src="images/p-logo.png" alt="Polymer Logo"></a>
                             </p>
