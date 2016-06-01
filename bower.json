@@ -1,6 +1,6 @@
 {
   "name": "vcard-footer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Footer",
   "private": true,
   "authors": [
@@ -19,6 +19,6 @@
   "license": "MIT",
   "ignore": [],
   "dependencies": {
-        "polymer": "Polymer/polymer#1.0.0"
+        "polymer": "Polymer/polymer#1.4.0"
   }
 }
